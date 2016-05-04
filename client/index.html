@@ -22,11 +22,11 @@
     <script>
       $(function() {
         // set up model objects
-        var library = new Songs(songData);
-        var app = new AppModel({library: library});
+        var library = new Songs(songData); //Collection
+        var app = new AppModel({library: library}); //Model
 
         // build a view for the top level of the whole app
-        var appView = new AppView({model: app});
+        var appView = new AppView({model: app}); //View
 
         // put the view onto the screen
         $('body').append(appView.render());
@@ -34,3 +34,29 @@
     </script>
   </body>
 </html>
+
+<!-- 
+Data.js holds an array of objects that contains URL, title, and artist property
+
+Song Model = Is a backbone model class. Should store song data.
+
+Songs Collection = Holds all instances of Songs model.
+
+Songs Queue = Collection of songs in a particular order
+
+App Model = Backbone model class for entire app. This is where
+  you will hold data such current song.
+
+PlayerView = view class for music player. Holds audio html tag
+
+LibraryView = view class for music library. It's HTML el is a 
+  table. It also returns new LibraryEntryView instances inside
+  as a subclass.
+
+LibraryEntryView = subview class of LibraryView.
+AppView = view class for entire app. Initializes:
+  PlayerView
+  LibraryView
+
+
+-->
