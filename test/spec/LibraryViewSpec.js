@@ -52,7 +52,6 @@ describe('LibraryView', function() {
       var FakeLibraryView = LibraryView.extend({ render: sinon.spy() });
       view = new FakeLibraryView({ collection: new Songs() });
       expect(view.render).to.have.been.calledOnce;
-      console.log(requests[0])
 
       requests[0].respond(200, { 'Content-Type': 'application/json' }, fakeResponse);
       expect(view.render).to.have.been.calledTwice;
