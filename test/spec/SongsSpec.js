@@ -1,5 +1,5 @@
 describe('Songs', function() {
-  xdescribe('when fetching song data from Parse', function() {
+  describe('when fetching song data from Parse', function() {
     var songs, fakeSongData, fakeResponse, xhr, requests;
 
     beforeEach(function() {
@@ -24,6 +24,7 @@ describe('Songs', function() {
 
       fakeResponse = JSON.stringify({ results: fakeSongData });
     });
+
 
     afterEach(function() {
       xhr.restore();
