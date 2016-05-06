@@ -1,4 +1,5 @@
 // Songs.js - Defines a backbone collection class for songs.
+//LIBRARY
 var Songs = Backbone.Collection.extend({
 
   model: SongModel,
@@ -24,6 +25,5 @@ var Songs = Backbone.Collection.extend({
   parse: function(response) {
   	return response.results;
   }
-
 
 });

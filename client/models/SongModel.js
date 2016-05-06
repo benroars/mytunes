@@ -9,6 +9,12 @@ var SongModel = Backbone.Model.extend({
     artist: ""
   },
 
+  defaults: {
+    url: "",
+    title: "",
+    artist: ""
+  },
+
   play: function() {
     this.trigger('play', this);
   },

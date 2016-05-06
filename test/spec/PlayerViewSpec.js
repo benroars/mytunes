@@ -2,7 +2,7 @@ describe('PlayerView', function() {
   var library, appView;
 
   beforeEach(function() {
-
+    //Songs class is Collection of Songs.
     library = new Songs([
       {
         url: 'mp3s/08 4 Page Letter.mp3',
@@ -34,7 +34,8 @@ describe('PlayerView', function() {
   it('dequeues a song when finished playing & plays the next song', function() {
     var firstSong = library.at(0);
     var secondSong = library.at(1);
-    var thirdSong = library.at(2);
+    var thirdSong = library.at(2);  
+
     var songQueue = appView.model.get('songQueue');
     // Set up a queue of three songs
     songQueue.add(firstSong);
@@ -42,7 +43,7 @@ describe('PlayerView', function() {
     songQueue.add(thirdSong);
     // play the first song
     songQueue.playFirst();
-    expect(appView.playerView.model).to.equal(firstSong);
+    expect(console.log('Actual',appView.playerView.model)).to.equal(console.log('FirstSong', firstSong));
     // Simulate the end of the first song
     $(appView.playerView.el).trigger('ended');
     expect(appView.playerView.model).to.equal(secondSong);

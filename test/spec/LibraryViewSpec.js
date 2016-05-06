@@ -41,7 +41,6 @@ describe('LibraryView', function() {
       xhr.onCreate = function(request) {
         requests.push(request);
       };
-
       fakeResponse = JSON.stringify({ results: fakeSongData });
     });
 

@@ -25,6 +25,7 @@ describe('Songs', function() {
       fakeResponse = JSON.stringify({ results: fakeSongData });
     });
 
+
     afterEach(function() {
       xhr.restore();
     });
