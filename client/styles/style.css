@@ -1,0 +1,65 @@
+table {
+	width: 500px !important;
+}
+
+th {
+	text-align: center;
+
+}
+
+audio {
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.src {  
+    height: 490px !important;
+    overflow: scroll !important;
+    width: 500px !important;
+    margin-bottom: 10px;
+}
+
+​h1 {
+	color: inherit;
+}
+
+table tr:hover {
+	background-color: #0F8765 !important; 
+	
+}
+
+.jumbotronTransp {
+ padding: 30px;
+ margin-bottom: 30px;
+ margin-right: 10px;
+ font-size: 2em;
+ font-weight: 200;
+ line-height: 2.1428571435;
+ color: inherit;
+ border-radius: 15px;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7eb4a6+0,5c9e8d+17,497d70+33,0f5946+67,0a382d+83,041813+100 */
+ background: #7eb4a6; /* Old browsers */
+ background: -moz-radial-gradient(center, ellipse cover,  #7eb4a6 0%, #5c9e8d 17%, #497d70 33%, #0f5946 67%, #0a382d 83%, #041813 100%); /* FF3.6-15 */
+ background: -webkit-radial-gradient(center, ellipse cover,  #7eb4a6 0%,#5c9e8d 17%,#497d70 33%,#0f5946 67%,#0a382d 83%,#041813 100%); /* Chrome10-25,Safari5.1-6 */
+ background: radial-gradient(ellipse at center,  #7eb4a6 0%,#5c9e8d 17%,#497d70 33%,#0f5946 67%,#0a382d 83%,#041813 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7eb4a6', endColorstr='#041813',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ 
+ font-family: 'Lobster', Georgia, Times, serif;
+ border-style: dashed;
+ border-color: black;
+}
+
+.container {
+	width: 77%;
+	border-radius: 5px;
+	border-style: dashed;
+	border-color: black;
+	background-image: url("floor.jpg");
+
+}
+
+body {
+	background-color: black;
+	background-image: url("texture.jpg");
+}

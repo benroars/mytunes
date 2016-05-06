@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <body>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script src="data/data.js"></script>
 
@@ -13,12 +19,24 @@
     <script src="collections/Songs.js"></script>
     <script src="collections/SongQueue.js"></script>
     <script src="models/AppModel.js"></script>
+    <script src="env/config.js"></script>
 
+    <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/SongQueueView.js"></script>
     <script src="views/PlayerView.js"></script>
     <script src="views/LibraryView.js"></script>
     <script src="views/LibraryEntryView.js"></script>
     <script src="views/AppView.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <!--h1 class="jumbotronTransp text-center"> myTunes </h1-->
+        <div class="container2">
+          <div class="jumbotronTransp text-center">
+            <h1 class='mt'>myTunes</h1>  
+        </div>
 
+    </div>
     <script>
       $(function() {
         // set up model objects
@@ -29,8 +47,13 @@
         var appView = new AppView({model: app}); //View
 
         // put the view onto the screen
-        $('body').append(appView.render());
+     //   $('body').append(appView.render());
+        $('.container').append(appView.render());
+
+        $('.table').wrap('<div class="src col-sm-6"></div>');
       });
+
+      
     </script>
   </body>
 </html>
